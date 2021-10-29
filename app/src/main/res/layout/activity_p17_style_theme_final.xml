@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".P17STyleThemeFinal">
+
+    <RelativeLayout android:layout_height="0dp" android:layout_width="match_parent"
+        android:layout_weight="1">
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content"
+            style="@style/TeamName" android:layout_centerHorizontal="true" android:text="Team1">
+        </TextView>
+        <ImageButton android:layout_height="80dp" android:layout_width="80dp" android:id="@+id/decrease1"
+            style="@style/MinusButton" android:onClick="dodecrease" android:scaleType="fitXY"
+            android:layout_centerInParent="true" android:layout_alignParentLeft="true"> </ImageButton>
+        <TextView android:id="@+id/count1" style="@style/ScoreText" android:text="0"> </TextView>
+        <ImageButton android:layout_height="80dp" android:layout_width="80dp" android:id="@+id/increase1"
+            style="@style/PlusButton" android:onClick="doincrease" android:scaleType="fitXY"
+            android:layout_centerInParent="true" android:background="@drawable/button_background"
+            android:adjustViewBounds="true" android:layout_alignParentEnd="true"> </ImageButton>
+    </RelativeLayout>
+
+    <RelativeLayout android:layout_height="0dp" android:layout_width="match_parent"
+        android:layout_weight="1">
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content"
+            style="@style/TeamName" android:layout_centerHorizontal="true" android:text="Team2"> </TextView>
+        <ImageButton android:layout_height="80dp" android:layout_width="80dp" android:id="@+id/decrease2"
+            style="@style/MinusButton" android:onClick="dodecrease" android:scaleType="fitXY"
+            android:layout_centerInParent="true" android:layout_alignParentLeft="true"> </ImageButton>
+        <TextView android:layout_height="wrap_content" android:layout_width="wrap_content"
+            android:id="@+id/count2" android:text="0" android:layout_centerInParent="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"> </TextView>
+
+        <ImageButton android:layout_height="80dp" android:layout_width="80dp" android:id="@+id/increase2"
+            style="@style/PlusButton" android:onClick="doincrease" android:scaleType="fitXY"
+            android:layout_centerInParent="true" android:adjustViewBounds="true"
+            android:layout_alignParentEnd="true"> </ImageButton>
+
+    </RelativeLayout>
+
+    <Button android:layout_height="wrap_content" android:layout_width="wrap_content"
+        android:id="@+id/cutom" android:text="Result" android:onClick="result"
+        android:background="@drawable/st" android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true" android:layout_marginStart="120dp"
+        android:layout_marginBottom="81dp"/>
+</LinearLayout>

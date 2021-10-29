@@ -1,0 +1,46 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style parent="Theme.AppCompat.DayNight.DarkActionBar" name="AppTheme">
+
+        <!-- Customize your theme here. -->
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+
+    <style parent="Widget.AppCompat.Button" name="ScoreButton">
+    <item name="android:background">@drawable/button_background</item>
+    </style>
+    <style parent="ScoreButton" name="PlusButton">
+    <item name="android:src"> @drawable/ic_add_black_24dp</item>
+    </style>
+    <style parent="ScoreButton" name="MinusButton">
+    <item name="android:src"> @drawable/ic_remove_black_24dp</item>
+    </style>
+
+    <style name="TeamName">
+    <item name="android:textAppearance">@style/TextAppearance.AppCompat.Display1 </item>
+    </style>
+    <style parent="TextAppearance.AppCompat.Headline" name="ScoreText">
+    <item name="android:layout_width">wrap_content</item>
+
+    <item name="android:layout_height">wrap_content</item>
+
+    <item name="android:layout_centerInParent">true</item>
+
+</style>
+
+    <style parent="ScoreButton" name="button_style"> </style>
+
+
+
+</resources>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/AKaurPahwa/AndroidStudioProjects/cse226_2021_Part2/app/src/main/res/drawable/button_background.xml" value="0.1" />
+        <entry key="..\:/Users/AKaurPahwa/AndroidStudioProjects/cse226_2021_Part2/app/src/main/res/drawable/st.xml" value="0.1" />
+        <entry key="..\:/Users/AKaurPahwa/AndroidStudioProjects/cse226_2021_Part2/app/src/main/res/layout/activity_p16_menu_and_increment_value.xml" value="0.1" />
+        <entry key="..\:/Users/AKaurPahwa/AndroidStudioProjects/cse226_2021_Part2/app/src/main/res/layout/activity_p16styletheme.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/AKaurPahwa/AndroidStudioProjects/cse226_2021_Part2/app/src/main/res/layout/activity_p17_style_theme_final.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/AKaurPahwa/AndroidStudioProjects/cse226_2021_Part2/app/src/main/res/layout/activity_p17styletheme.xml" value="0.1" />
+        <entry key="..\:/Users/AKaurPahwa/AndroidStudioProjects/cse226_2021_Part2/app/src/main/res/layout/activity_p19_static_data_sql_lite_db.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/AKaurPahwa/AndroidStudioProjects/cse226_2021_Part2/app/src/main/res/menu/menu1.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/AKaurPahwa/AndroidStudioProjects/cse226_2021_Part2/app/src/main/res/menu/menu2.xml" value="0.1" />
+        <entry key="..\:/Users/AKaurPahwa/AndroidStudioProjects/cse226_2021_Part2/app/src/main/res/menu/menu4.xml" value="0.19947916666666668" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
