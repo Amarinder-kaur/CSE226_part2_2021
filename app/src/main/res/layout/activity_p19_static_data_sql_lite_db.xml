@@ -78,6 +78,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button3"
+        android:onClick="update"
         android:textStyle="normal|bold"
         android:layout_below="@+id/editText3"
         android:layout_alignLeft="@+id/button4"
@@ -105,7 +106,7 @@
         android:layout_marginRight="21dp"
         android:layout_marginEnd="21dp"
         android:id="@+id/button4"
-
+        android:onClick="delete"
         android:textStyle="normal|bold"
         tools:ignore="RelativeOverlap"
         android:layout_marginBottom="41dp"

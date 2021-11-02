@@ -14,7 +14,7 @@ import android.widget.Toast;
 import java.util.List;
 //for coding : https://abhiandroid.com/database/sqlite
 public class P19StaticDataSqlLiteDB extends AppCompatActivity {
-    EditText Name, Pass;
+    EditText Name, Pass , updateold, updatenew, delete;
     P19DatabaseHandler helper;
 
     @Override
@@ -24,6 +24,10 @@ public class P19StaticDataSqlLiteDB extends AppCompatActivity {
 
         Name = (EditText) findViewById(R.id.editName);
         Pass = (EditText) findViewById(R.id.editPass);
+        updateold=findViewById(R.id.editText3);
+        updatenew=findViewById(R.id.editText5);
+        delete=findViewById(R.id.editText6);
+
         helper = new P19DatabaseHandler (this);
     }
 
@@ -53,4 +57,50 @@ public class P19StaticDataSqlLiteDB extends AppCompatActivity {
         String data = helper.getData();
         Toast.makeText(getApplicationContext(),""+ data,Toast.LENGTH_SHORT).show();
     }
+
+    public void update( View view)
+    {
+        String u1 = updateold.getText().toString();
+        String u2 = updatenew.getText().toString();
+        if(u1.isEmpty() || u2.isEmpty())
+        {
+            Toast.makeText(getApplicationContext(),"Enter Data",Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            int a= helper.updateName( u1, u2);
+            if(a<=0)
+            {
+                Toast.makeText(getApplicationContext(),"Unsuccessful",Toast.LENGTH_SHORT).show();
+                updateold.setText("");
+                updatenew.setText("");
+            } else {
+                Toast.makeText(getApplicationContext(),"Updated",Toast.LENGTH_SHORT).show();
+                updateold.setText("");
+                updatenew.setText("");
+            }
+        }
+    }
+    public void delete( View view)
+    {
+        String uname = delete.getText().toString();
+        if(uname.isEmpty())
+        {
+            Toast.makeText(getApplicationContext(),"Enter Data",Toast.LENGTH_SHORT).show();
+        }
+        else{
+            int a= helper.delete(uname);
+            if(a<=0)
+            {
+                Toast.makeText(getApplicationContext(),"Unsuccessful",Toast.LENGTH_SHORT).show();
+                delete.setText("");
+            }
+            else
+            {
+                Toast.makeText(getApplicationContext(),"Deleted",Toast.LENGTH_SHORT).show();
+                delete.setText("");
+            }
+        }
+    }
+
 }

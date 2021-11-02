@@ -25,17 +25,13 @@ public class P19DatabaseHandler extends SQLiteOpenHelper {
         super(context, DATABASE_NAME, null, DATABASE_Version);
         this.context = context;
     }
-
     public void onCreate(SQLiteDatabase db) {
-
         try {
             db.execSQL(CREATE_TABLE);
         } catch (Exception e) {
             Toast.makeText(context, "" + e, Toast.LENGTH_SHORT).show();
-
         }
     }
-
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         try {
@@ -47,7 +43,6 @@ public class P19DatabaseHandler extends SQLiteOpenHelper {
             Toast.makeText(context, "" + e, Toast.LENGTH_SHORT).show();
         }
     }
-
     public long insertData(String name, String pass) {
         SQLiteDatabase dbb = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -56,7 +51,6 @@ public class P19DatabaseHandler extends SQLiteOpenHelper {
         long id = dbb.insert(TABLE_NAME, null, contentValues);
         return id;
     }
-
     public String getData() {
         SQLiteDatabase db = this.getWritableDatabase();
         String[] columns = {UID, NAME,MyPASSWORD};
@@ -69,6 +63,22 @@ public class P19DatabaseHandler extends SQLiteOpenHelper {
             buffer.append(cid + "   " + name + "   " + password + " \n");
         }
         return buffer.toString();
+    }
+    public  int delete(String uname)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String[] whereArgs ={uname};
+        int count =db.delete(TABLE_NAME ,NAME+" = ?",whereArgs);
+        return  count;
+    }
+    public int updateName(String oldName , String newName)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(NAME,newName);
+        String[] whereArgs= {oldName};
+        int count =db.update(TABLE_NAME,contentValues, NAME+" = ?",whereArgs );
+        return count;
     }
 
 }

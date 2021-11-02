@@ -12,6 +12,8 @@
         <activity
             android:name=".P19StaticDataSqlLiteDB"
             android:exported="true">
+
+
         </activity>
         <activity
             android:name=".P18SqlLiteDB"
@@ -21,7 +23,6 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
         <activity
             android:name=".P17STyleThemeFinal"

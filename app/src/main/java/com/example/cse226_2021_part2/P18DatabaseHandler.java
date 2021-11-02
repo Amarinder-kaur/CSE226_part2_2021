@@ -85,6 +85,27 @@ public class P18DatabaseHandler extends SQLiteOpenHelper {
         // returning lables
         return list1;
     }
+
+    public int DeleteName(String uname )
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        String[] whereArgs ={uname};
+
+        int count =db.delete(TABLE_NAME ,COLUMN_NAME+" = ?",whereArgs);
+        return  count;
+
+    }
+
+    public int UpdateName(String olduname, String newuname )
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(COLUMN_NAME,newuname);
+        String[] whereArgs= {olduname};
+        int count =db.update(TABLE_NAME,contentValues, COLUMN_NAME+" = ?",whereArgs );
+        return count;
+
+    }
 }
 
 
